@@ -37,20 +37,20 @@
 		<div id="container">
 			
 			<header class="header" role="banner">
-			
-				<div id="inner-header" class="wrap clearfix">
+						
+				<nav role="navigation">
+
+					<ul class="navigation__pages">
+						<li>Home</li>
+						<li>Bio</li>
+						<li>Media</li>
+						<li>Contact Us</li>
+					</ul>
+
+					<div class="navigation__tri-shape">
+
+					</div>
+
+				</nav>
 					
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-					<h1 id="logo" ><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
-					
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-					
-					
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
-				
-				</div> <!-- end #inner-header -->
-			
 			</header> <!-- end header -->
