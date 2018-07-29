@@ -22,7 +22,8 @@
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 				
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
