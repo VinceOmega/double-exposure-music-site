@@ -4,7 +4,7 @@ require '/Library/Ruby/Gems/1.8/gems/compass-rgbapng-0.1.1/lib/rgbapng.rb'
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "library/css"
-sass_dir = "library/scss"
+sass_dir = "library/sass"
 images_dir = "library/images"
 javascripts_dir = "library/js"
 
