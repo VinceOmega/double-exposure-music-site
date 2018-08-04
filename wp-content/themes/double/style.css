@@ -77,11 +77,12 @@ it a week, maybe two, and you will never go back.
 Happy Developing!
 
 ******************************************************************/
-body{
+
+body {
     background: #000;
 }
 
-.container{
+.container {
     height: 100%;
     width: 100%;
     background: #000;
@@ -89,21 +90,21 @@ body{
     position: absolute;
 }
 
-.container__media{
-    background-image: url( 'img/Double_Exposure_Center_Stage.jpg' );
+.container__media {
+    background-image: url('img/Double_Exposure_Center_Stage.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: inherit;
     width: inherit;
 }
 
-.navigation__pages{
+.navigation__pages {
     color: white;
     position: absolute;
     z-index: 30;
 }
 
-.navigation__tri-shape{
+.navigation__tri-shape {
     width: 0;
     height: 0;
     border-style: solid;
@@ -111,5 +112,25 @@ body{
     border-color: #ea00ff transparent transparent transparent;
     position: absolute;
     top: 0;
+    z-index: 20;
+}
+
+.footer__music {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+    color: white;
+}
+
+.footer__tri-shape {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 300px 300px;
+    border-color: transparent transparent #ea00ff transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     z-index: 20;
 }
