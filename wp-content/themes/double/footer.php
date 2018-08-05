@@ -2,8 +2,8 @@
 			
 				<div class="footer__music">
 					
-					<i class=""></i>
-	           		<h4 class="footer__music__header">MUSIC : <span class="footer__music__header__indicator">OFF</span></h4>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/vinyl-record.svg" class="footer__music__vinyl">
+	           		<h5 class="footer__music__header">MUSIC : <span class="footer__music__header__indicator">OFF</span></h5>
 					<p class="footer__music__name-display">Loading...</p>
 
 				</div> 

@@ -78,16 +78,60 @@ Happy Developing!
 
 ******************************************************************/
 
+@font-face {
+    font-family: 'Prisma';
+    src: url('fonts/Prisma/Prisma.otf') format('opentype'), url('fonts/Prisma/Prisma.ttf') format('truetype');
+}
+
+html,
+body,
+header,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+h6,
+h5,
+h4,
+h3,
+h2,
+h1,
+div,
+span,
+a,
+form {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 body {
     background: #000;
 }
 
 .container {
-    height: 100%;
+    height: 95%;
     width: 100%;
     background: #000;
     z-index: 10;
     position: absolute;
+}
+
+.container__main-header {
+    font-family: 'Prisma', sans-serif;
+    position: absolute;
+    top: 10px;
+    color: #ea00ff;
+    margin: 0 auto;
+    top: 15%;
+    left: 25%;
+    padding: 10px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 2px solid #ea00ff;
+    border-bottom: 2px solid #ea00ff;
+    font-size: 60px;
 }
 
 .container__media {
@@ -98,10 +142,21 @@ body {
     width: inherit;
 }
 
+header {
+    display: block;
+    position: fixed;
+    z-index: 50;
+}
+
 .navigation__pages {
     color: white;
     position: absolute;
     z-index: 30;
+}
+
+.navigation__pages li {
+    margin: 15px 0;
+    font-weight: 700;
 }
 
 .navigation__tri-shape {
@@ -113,6 +168,17 @@ body {
     position: absolute;
     top: 0;
     z-index: 20;
+    padding: 0;
+    margin: 0;
+}
+
+.footer {
+    clear: both;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 30%;
+    z-index: 50;
 }
 
 .footer__music {
@@ -120,7 +186,30 @@ body {
     bottom: 0;
     right: 0;
     z-index: 30;
-    color: white;
+    color: #000;
+}
+
+.footer__music__vinyl {
+    position: absolute;
+    width: 70%;
+    right: 0;
+    top: 5px;
+}
+
+.footer__music__header {
+    position: relative;
+    right: 90px;
+    font-weight: 700;
+    color: black;
+    letter-spacing: 1px;
+    top: 20px;
+}
+
+.footer__music__name-display {
+    position: relative;
+    right: 90px;
+    font-weight: 500;
+    color: black;
 }
 
 .footer__tri-shape {
@@ -133,4 +222,6 @@ body {
     bottom: 0;
     right: 0;
     z-index: 20;
+    margin: 0;
+    padding: 0;
 }
