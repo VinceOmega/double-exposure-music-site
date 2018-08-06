@@ -1,12 +1,4 @@
 
 # BEGIN WordPress
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /double/double-exposure-music-site/
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /double/double-exposure-music-site/index.php [L]
-</IfModule>
 
 # END WordPress
