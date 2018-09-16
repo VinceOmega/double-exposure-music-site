@@ -448,6 +448,11 @@ header {
     font-weight: 700;
 }
 
+.navigation__pages li a{
+	color: white;
+	text-decoration: none;
+}
+
 .navigation__tri-shape {
     width: 0;
     height: 0;

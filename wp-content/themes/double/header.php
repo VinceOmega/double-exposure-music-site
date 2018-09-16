@@ -49,10 +49,10 @@
 				<nav role="navigation">
 
 					<ul class="navigation__pages">
-						<li>Home</li>
-						<li>Bio</li>
-						<li>Media</li>
-						<li>Contact Us</li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/bio">Bio</a></li>
+						<li><a href="/media">Media</a></li>
+						<li><a href="/contact-us">Contact Us</a></li>
 					</ul>
 
 					<div class="navigation__tri-shape">

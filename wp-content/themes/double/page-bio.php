@@ -6,6 +6,7 @@ Template Name: Bio Page
 
 <?php get_header(); ?>
 			
+<<<<<<< HEAD
 	<div id="page-container" class="container">
 
         <div class="container__bio">
@@ -149,6 +150,27 @@ Template Name: Bio Page
             <div class="container__bio__empty-end"></div>
 
         </div>
+=======
+			<div id="page-container" class="container">
+
+                <div class="container__bio">
+
+                    <div class="container__bio__text"> <p> Dolore laborum minim aliquip fugiat aute veniam. Elit qui laboris consectetur ad tempor laboris. Est id ad ullamco proident reprehenderit consequat nulla dolore. Nulla commodo consequat dolor eiusmod in cillum qui minim. Laborum dolor mollit pariatur exercitation quis esse excepteur esse labore aliqua. Cupidatat Lorem cillum consectetur nisi aliquip eu nulla do. Magna qui cupidatat tempor eiusmod. </p> </div>
+
+                    <span class="container__bio__parallax-example-one"></span>
+
+                    <div class="container__bio__text"> <p> Dolore laborum minim aliquip fugiat aute veniam. Elit qui laboris consectetur ad tempor laboris. Est id ad ullamco proident reprehenderit consequat nulla dolore. Nulla commodo consequat dolor eiusmod in cillum qui minim. Laborum dolor mollit pariatur exercitation quis esse excepteur esse labore aliqua. Cupidatat Lorem cillum consectetur nisi aliquip eu nulla do. Magna qui cupidatat tempor eiusmod. </p> </div>
+
+                    <span class="container__bio__parallax-example-two"></span>
+
+                    <div class="container__bio__text"> <p> Dolore laborum minim aliquip fugiat aute veniam. Elit qui laboris consectetur ad tempor laboris. Est id ad ullamco proident reprehenderit consequat nulla dolore. Nulla commodo consequat dolor eiusmod in cillum qui minim. Laborum dolor mollit pariatur exercitation quis esse excepteur esse labore aliqua. Cupidatat Lorem cillum consectetur nisi aliquip eu nulla do. Magna qui cupidatat tempor eiusmod. </p> </div>
+
+                    <span class="container__bio__parallax-example-three"></span>
+
+                    <div class="container__bio__text"> <p> Dolore laborum minim aliquip fugiat aute veniam. Elit qui laboris consectetur ad tempor laboris. Est id ad ullamco proident reprehenderit consequat nulla dolore. Nulla commodo consequat dolor eiusmod in cillum qui minim. Laborum dolor mollit pariatur exercitation quis esse excepteur esse labore aliqua. Cupidatat Lorem cillum consectetur nisi aliquip eu nulla do. Magna qui cupidatat tempor eiusmod. </p> </div>
+
+                </div>
+>>>>>>> 1688c3d9368d4d72d31ab5320080ce91bd3494d0
 			
 	</div> <!-- end #content -->
 
