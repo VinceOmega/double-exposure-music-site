@@ -19,6 +19,7 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,700i" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/mediaboxAdv-Dark.css">
 
 		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
@@ -32,6 +33,13 @@
 			
 		<!-- drop Google Analytics Here -->
 		<!-- end analytics -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools-more/1.6.0/mootools-more-compressed.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/howler.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/nonverblaster.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/swfobject.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/script.js"></script>
 		
 	</head>
 	

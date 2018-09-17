@@ -141,12 +141,30 @@ body {
     height: auto;
 }
 
+.container__bio__header {
+    margin-left: 20%;
+    margin-top: 50px;
+    color: white;
+}
+
 .container__bio p {
     margin: 10% 20%;
     color: white;
     font-weight: 500;
     background-color: transparent;
     height: 50px;
+}
+
+.container__bio p a {
+    color: #ea00ff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container__bio__text p a {
+    color: #ea00ff;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .container__media {
@@ -285,6 +303,76 @@ body {
     height: 200px;
 }
 
+.container__bio__parallax-summer-1961 {
+    background-image: url('img/FourPlayPromo.jpg');
+    width: 100%;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    z-index: 30;
+}
+
+.container__bio__parallax-1978 {
+    background-image: url('img/SoulTrain.jpg');
+    width: 100%;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    z-index: 30;
+}
+
+.container__bio__parallax-1982 {
+    background-image: url('img/Billboard.jpg');
+    width: 100%;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    z-index: 30;
+}
+
+.container__bio__parallax-2018 {
+    background-image: url('img/duo.jpg');
+    width: 100%;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    z-index: 30;
+}
+
+.container__bio__parallax-end-card {
+    background-image: url('img/group.jpg');
+    width: 100%;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    z-index: 30;
+}
+
 .container__bio__parallax-example-zero {
     background-image: url('https://placeimg.com/1000/400/any');
     width: 1000px;
@@ -355,6 +443,12 @@ body {
     z-index: 30;
 }
 
+.simcal-calendar {
+    position: relative;
+    background: white;
+    color: black;
+}
+
 header {
     display: block;
     position: fixed;
@@ -372,9 +466,9 @@ header {
     font-weight: 700;
 }
 
-.navigation__pages li a{
-	color: white;
-	text-decoration: none;
+.navigation__pages li a {
+    color: white;
+    text-decoration: none;
 }
 
 .navigation__tri-shape {
@@ -388,6 +482,7 @@ header {
     z-index: 20;
     padding: 0;
     margin: 0;
+    opacity: .8;
 }
 
 .footer {
@@ -442,4 +537,5 @@ header {
     z-index: 20;
     margin: 0;
     padding: 0;
+    opacity: .8;
 }
