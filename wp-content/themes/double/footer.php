@@ -3,7 +3,7 @@
 				<div class="footer__music">
 					
 					<img src="<?php echo get_template_directory_uri(); ?>/img/vinyl-record.svg" class="footer__music__vinyl">
-	           		<h5 class="footer__music__header">MUSIC : <span class="footer__music__header__indicator">OFF</span></h5>
+	           		<h5 class="footer__music__header">MUSIC : <span id="music-player-controler" class="footer__music__header__indicator">OFF</span></h5>
 					<p class="footer__music__name-display">Loading...</p>
 
 				</div> 

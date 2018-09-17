@@ -155,6 +155,18 @@ body {
     height: 50px;
 }
 
+.container__bio p a {
+    color: #ea00ff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container__bio__text p a {
+    color: #ea00ff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
 .container__media {
     background-image: url('img/Double_Exposure_Center_Stage.jpg');
     background-size: cover;
@@ -431,6 +443,12 @@ body {
     z-index: 30;
 }
 
+.simcal-calendar {
+    position: relative;
+    background: white;
+    color: black;
+}
+
 header {
     display: block;
     position: fixed;
@@ -448,9 +466,9 @@ header {
     font-weight: 700;
 }
 
-.navigation__pages li a{
-	color: white;
-	text-decoration: none;
+.navigation__pages li a {
+    color: white;
+    text-decoration: none;
 }
 
 .navigation__tri-shape {
