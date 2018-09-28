@@ -5671,7 +5671,7 @@ window.addEvent('domready', function() {
             link.stop();
             var pageTitle   = link.target.get( 'data-title' );
             var url         = link.target.get( 'href' );
-            document.getElementById("content").innerHTML = pageTitle;
+            $$( 'body' ).innerHTML = pageTitle;
             document.title = url;
             window.history.pushState( { "html":url,"pageTitle":pageTitle },"", url );
 
