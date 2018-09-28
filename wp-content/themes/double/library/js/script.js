@@ -5671,10 +5671,11 @@ window.addEvent('domready', function() {
             link.stop();
             var pageTitle   = link.target.get( 'data-title' );
             var url         = link.target.get( 'href' );
+            var html        = new Request.HTML( { url: url } ).get();
 
             console.log( url );
 
-            $$( 'html' ).innerHTML =  new Request.HTML( { url: url } ).get();
+            $$( 'html' ).( 'html', html );  
             document.title = pageTitle;
             window.history.pushState( null,'', url );
 
