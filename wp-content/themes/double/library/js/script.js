@@ -4755,7 +4755,7 @@ var Mediabox;
                 wmode: 'opaque', // Background setting for Adobe Flash ('opaque' and 'transparent' are most common)
                 //			NonverBlaster
                 useNB: true, // use NonverBlaster (true) or JW Media Player (false) for .flv and .mp4 files
-                playerpath: '/wp-content/theme/double/library/js/NonverBlaster.swf', // Path to NonverBlaster.swf
+                playerpath: '/wp-content/themes/double/library/js/NonverBlaster.swf', // Path to NonverBlaster.swf
                 controlColor: '0xFFFFFF', // set the controlbar color
                 controlBackColor: '0x000000', // set the controlbar color
                 showTimecode: 'false', // turn timecode display off or on
