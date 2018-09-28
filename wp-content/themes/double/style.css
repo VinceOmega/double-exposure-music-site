@@ -108,7 +108,15 @@ form {
 
 body {
     background: #000;
+    margin: 0;
+    padding: 0;
 }
+
+#container, #page-container{
+    margin: 0;
+    padding: 0;
+}
+
 .rotate {
     -webkit-animation: rotation 2s infinite linear;
 }
@@ -123,7 +131,7 @@ body {
 }
 
 .container {
-    height: 95%;
+    height: 100%;
     width: 100%;
     background: #000;
     z-index: 10;

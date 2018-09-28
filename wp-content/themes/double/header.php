@@ -54,10 +54,10 @@
 				<nav role="navigation">
 
 					<ul class="navigation__pages">
-						<li><a class="navigation__pages__links" href="/" data-title="home">Home</a></li>
-						<li><a class="navigation__pages__links" href="/bio" data-title="bio">Bio</a></li>
-						<li><a class="navigation__pages__links" href="/media" data-title="media">Media</a></li>
-						<li><a class="navigation__pages__links" href="/contact-us" data-title="contact-us">Contact Us</a></li>
+						<li><a class="navigation__pages__links" href="/" 			data-title="home">Home</a></li>
+						<li><a class="navigation__pages__links" href="/bio" 		data-title="bio">Bio</a></li>
+						<li><a class="navigation__pages__links" href="/media" 		data-title="media">Media</a></li>
+						<li><a class="navigation__pages__links" href="/contact-us" 	data-title="contact-us">Contact Us</a></li>
 					</ul>
 
 					<div class="navigation__tri-shape">
