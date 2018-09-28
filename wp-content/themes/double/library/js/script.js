@@ -5673,7 +5673,7 @@ window.addEvent('domready', function() {
             var url         = link.target.get( 'href' );
             $$( 'body' ).innerHTML = pageTitle;
             document.title = url;
-            window.history.pushState( { "html":url,"pageTitle":pageTitle },"", url );
+            window.history.pushState( null,'', url );
 
         } );
 
