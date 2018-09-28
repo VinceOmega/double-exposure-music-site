@@ -33,9 +33,11 @@
 			
 		<!-- drop Google Analytics Here -->
 		<!-- end analytics -->
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools-more/1.6.0/mootools-more-compressed.js"></script>
+		
+		<!--
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools-more/1.6.0/mootools-more-compressed.js"></script>
+		-->
 		<script src="<?php echo get_template_directory_uri(); ?>/library/js/howler.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/library/js/nonverblaster.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/library/js/swfobject.js"></script>

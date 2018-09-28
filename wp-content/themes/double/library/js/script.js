@@ -5619,9 +5619,45 @@ Mediabox.scanPage = function() {
     });
 };
 window.addEvent("domready", Mediabox.scanPage);
-window.addEvent('domeready', function() {
-    $('music-player-controler').addEvents('click', function(playButton) {
-        playButton.toggleClass('on');
+
+window.addEvent('domready', function() {
+
+    var playButton  = $( 'music-player-controller' );
+    var recordIcon  = $('record-icon');
+    var songTitle   = $('music-player-controller-title');
+    var music       = new Howl({
+        src: ['wp-content/themes/double/media/audio/sample.mp3'],
+        loop: true
+      });
+      console.log( music );
+    var musicTitle  = music._src.split( '/' );
+
+    musicTitle      = musicTitle[ musicTitle.length - 1 ].split( '.' )[ 0 ];
+    musicTitle      = musicTitle.replace( '-', ' ' );
+
+    if( playButton.hasClass( 'on' )){
+        playButton.text = 'On';
+        songTitle.set( 'text', musicTitle );
+        music.play();
+    } else {
+        playButton.text = 'Off';
+        music.pause();
+    }
+
+    $('music-player-controller').addEvent('click', function( event ) {
+         
+        event.stop();
+        console.log( event.target );
+        this.toggleClass( 'on' );
+        recordIcon.toggleClass( 'rotate' );
+        if( this.hasClass( 'on' )){
+            this.text = 'On';
+            music.mute(false);
+        } else {
+            this.text = 'Off';
+            music.mute(true);
+        }
+
     });
 
 });
