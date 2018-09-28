@@ -5664,23 +5664,4 @@ window.addEvent('domready', function() {
 
     });
 
-    $$( '.navigation__pages__links' ).each( function( links ){
-
-        links.addEvent( 'click', function( link ){
-
-            link.stop();
-            var pageTitle   = link.target.get( 'data-title' );
-            var url         = link.target.get( 'href' );
-            //var html        = new Request.HTML( { url: url } ).get();
-
-            //console.log( html.reponse.html );
-
-            $$( 'html' ).load( url );  
-            document.title = pageTitle;
-            window.history.pushState( null,'', url );
-
-        } );
-
-    } );
-
 });
