@@ -5673,7 +5673,7 @@ window.addEvent('domready', function() {
             var url         = link.target.get( 'href' );
             var html        = new Request.HTML( { url: url } ).get();
 
-            console.log( url );
+            console.log( html );
 
             $$( 'html' ).set( 'html', html );  
             document.title = pageTitle;
