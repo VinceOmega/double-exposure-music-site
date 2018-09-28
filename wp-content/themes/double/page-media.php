@@ -12,7 +12,7 @@ Template Name: Media Page
 
             <div class="container__media-page__video">
                 <div class="container__media-page__video__image">
-                    <a href="media/video/Sample.mp4" class="" media="" media-src="" rel="lightbox[Example Video 50% 70%]" title="Example Video"><img src="https://placeimg.com/320/150/any"></a>
+                    <a href="video/Sample.mp4" class="" media="" media-src="" rel="lightbox[Example Video 50% 70%]" title="Example Video"><img src="https://placeimg.com/320/150/any"></a>
                     <div class="container__media-page__video__play">
                         <span><i class="fas fa-play-circle"></i>Play Video</span>
                     </div>
@@ -24,7 +24,7 @@ Template Name: Media Page
 
             <div class="container__media-page__audio">
                 <div class="container__media-page__audio__image">
-                    <a href="media/audio/Sample.mp3" class="" media="" media-src="" rel="lightbox[Example Audio 50% 70%]" title="Example Video"><img src="https://placeimg.com/320/150/any"></a>
+                    <a href="audio/Sample.mp3" class="" media="" media-src="" rel="lightbox[Example Audio 50% 70%]" title="Example Video"><img src="https://placeimg.com/320/150/any"></a>
                     <div class="container__media-page__audio__play">
                         <span><i class="fas fa-play-circle"></i>Play Audio</span>
                     </div>
