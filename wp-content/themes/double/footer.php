@@ -1,3 +1,5 @@
+			</div>
+
 			<footer class="footer" role="contentinfo">
 			
 				<div class="footer__music">
