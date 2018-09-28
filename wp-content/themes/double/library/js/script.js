@@ -5673,9 +5673,9 @@ window.addEvent('domready', function() {
             var url         = link.target.get( 'href' );
             var html        = new Request.HTML( { url: url } ).get();
 
-            console.log( html );
+            console.log( html.reponse.html );
 
-            $$( 'html' ).set( 'html', html );  
+            $$( 'html' ).set( 'html', html.reponse.html );  
             document.title = pageTitle;
             window.history.pushState( null,'', url );
 
