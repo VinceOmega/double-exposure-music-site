@@ -5673,8 +5673,8 @@ window.addEvent('domready', function() {
             var url         = link.target.get( 'href' );
 
             console.log( url );
-            
-            $$( 'body' ).innerHTML = url;
+
+            $$( 'body' ).innerHTML =  new Request.HTML( { url: url } );
             document.title = pageTitle;
             window.history.pushState( null,'', url );
 
