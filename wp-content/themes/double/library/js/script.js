@@ -5666,7 +5666,7 @@ window.addEvent('domready', function() {
 
     $$( '.navigation__pages__links' ).each( function( links ){
 
-        links.addClick( 'click', function( link ){
+        links.addEvent( 'click', function( link ){
 
             link.stop();
             var pageTitle   = link.target.get( 'data-title' );
