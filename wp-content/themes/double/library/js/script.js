@@ -5627,7 +5627,7 @@ window.addEvent('domready', function() {
     var songTitle   = $('music-player-controller-title');
     var music       = new Howl({
 
-        src: ['wp-content/themes/double/media/audio/sample.mp3'],
+        src: ['/wp-content/themes/double/media/audio/sample.mp3'],
         loop: true
         
       });      
