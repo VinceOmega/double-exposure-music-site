@@ -5626,28 +5626,32 @@ window.addEvent('domready', function() {
     var recordIcon  = $('record-icon');
     var songTitle   = $('music-player-controller-title');
     var music       = new Howl({
+
         src: ['wp-content/themes/double/media/audio/sample.mp3'],
         loop: true
-      });
-      console.log( music );
+        
+      });      
     var musicTitle  = music._src.split( '/' );
 
     musicTitle      = musicTitle[ musicTitle.length - 1 ].split( '.' )[ 0 ];
     musicTitle      = musicTitle.replace( '-', ' ' );
 
-    if( playButton.hasClass( 'on' )){
+    if( playButton.hasClass( 'on' ) ){
+
         playButton.text = 'On';
         songTitle.set( 'text', musicTitle );
         music.play();
+
     } else {
+
         playButton.text = 'Off';
         music.pause();
+
     }
 
     $('music-player-controller').addEvent('click', function( event ) {
          
         event.stop();
-        console.log( event.target );
         this.toggleClass( 'on' );
         recordIcon.toggleClass( 'rotate' );
         if( this.hasClass( 'on' )){
@@ -5659,5 +5663,18 @@ window.addEvent('domready', function() {
         }
 
     });
+
+    $$( '.navigation__pages__links' ).each( function( links ){
+
+        links.addClick( 'click', function( link ){
+
+            link.stop();
+            var pageTitle   = link.target.get( 'data-title' );
+            var url         = link.target.get( 'href' );
+            window.history.pushState( { "html":url,"pageTitle":pageTitle },"", url );
+
+        } );
+
+    } );
 
 });
