@@ -5674,7 +5674,7 @@ window.addEvent('domready', function() {
 
             console.log( url );
 
-            window.document.innerHTML =  new Request.HTML( { url: url } ).get();
+            $$( 'html' ).innerHTML =  new Request.HTML( { url: url } ).get();
             document.title = pageTitle;
             window.history.pushState( null,'', url );
 
