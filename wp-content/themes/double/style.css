@@ -83,12 +83,16 @@ Happy Developing!
     src: url('fonts/Prisma/Prisma.otf') format('opentype'), url('fonts/Prisma/Prisma.ttf') format('truetype');
 }
 
+html{
+    margin-top: 0 !important;
+}
+
 html,
 body,
 header,
 footer {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
 }
 
 html,
