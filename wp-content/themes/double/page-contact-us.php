@@ -15,7 +15,7 @@ Template Name: Contact Us Page
                          echo do_shortcode( '[calendar id="18"]' );
                     } else{
                         echo do_shortcode( '[calendar id="15"]' );
-                    } 
+                    } ?>
 
                 </div>
 			
