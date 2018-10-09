@@ -75,7 +75,7 @@ Template Name: Bio Page
                 </p>
             </div>
             <h2 class="container__bio__header">1979:</h2>
-            <div class="container__bio_text">
+            <div class="container__bio__text">
                 <p>
                     Salsoul releases “Locker Room” the third and final originally-produced album by the original group members.  “I’ve Got the Hots (for Ya)” is released as the club favorite, while “Why Do We Have to Go Our Separate Ways” is the precursor to a generation of steamy ballads to come in R&B for many years.  
                     Double Exposure is booked to travel to Canada and Nairobi Kenya. While Disco as a genre is ending in the US, it continues to flourish elsewhere in the world. 
