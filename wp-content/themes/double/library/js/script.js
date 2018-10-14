@@ -5861,6 +5861,7 @@ function navigation( page, url ) {
 function pageLoad( href ){
 
     var server = new Request.HTML().get( '\wp-content\themes\double\includes' + href + '.php' );
+    console.log( server );
     $( 'page-container' ).empty().inject( server );
 
 }
