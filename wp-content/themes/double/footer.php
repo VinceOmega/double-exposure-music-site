@@ -19,7 +19,7 @@
 		
 		<!-- all js scripts are loaded in library/bones.php -->
 		<?php //wp_footer(); ?>
-		<?php require_once "includes\modal-splash.php"; ?>
+		<?php require_once "includes/modal-splash.php"; ?>
 
 	</body>
 

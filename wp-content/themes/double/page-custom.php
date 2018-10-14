@@ -8,7 +8,7 @@ Template Name: Custom Page Example
 			
 	<div id="page-container" class="container">
 
-		<?php include 'includes\modal-home.php'; ?>
+		<?php include 'includes/modal-home.php'; ?>
 	
 	</div> <!-- end #content -->
 

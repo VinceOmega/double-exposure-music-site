@@ -8,7 +8,7 @@ Template Name: Contact Us Page
 			
     <div id="page-container" class="container">
 
-        <?php include 'includes\modal-contact.php'; ?>
+        <?php include 'includes/modal-contact.php'; ?>
     
     </div> <!-- end #content -->
 
