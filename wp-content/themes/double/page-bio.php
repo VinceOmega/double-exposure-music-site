@@ -8,7 +8,7 @@ Template Name: Bio Page
 
     <div id="page-container" class="container">
 
-        <?php include "/wp-content/themes/double/includes/modal-bio.php"; ?>
+        <?php include "includes/modal-bio.php"; ?>
 
     </div>
 

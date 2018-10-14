@@ -8,7 +8,7 @@ Template Name: Media Page
 			
     <div id="page-container" class="container">
 
-        <?php include "/wp-content/themes/double/includes/modal-media.php"; ?>
+        <?php include "includes/modal-media.php"; ?>
     
     </div> <!-- end #content -->
 
