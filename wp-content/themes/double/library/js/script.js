@@ -5861,7 +5861,7 @@ function navigation( page, url ) {
 function pageLoad( href ){
 
     $( 'page-container' ).set( 'load', { method: 'get' } );
-    $( 'page-container' ).load( '\wp-content\themes\double\includes' + href + '.php'  );
+    $( 'page-container' ).load( '/wp-content/themes/double/includes' + href + '.php'  );
 
 }
 
