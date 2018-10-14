@@ -1,3 +1,5 @@
+<?php header( 'Content-type: text/html; charset=utf-8' );?>
+
 <div class="container__bio">
 
     <div class="container__bio__parallax-summer-1961"></div>

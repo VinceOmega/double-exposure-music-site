@@ -1,3 +1,5 @@
+<?php header( 'Content-type: text/html; charset=utf-8' );?>
+
 <div class="container__media-page">
 
 <div class="container__media-page__video">

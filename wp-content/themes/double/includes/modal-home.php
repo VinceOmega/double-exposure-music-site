@@ -1,3 +1,5 @@
+<?php header( 'Content-type: text/html; charset=utf-8' );?>
+
 <h1 class="container__main-header">THIS IS DOUBLE EXPOSURE</h1>
 	
     <div class="container__media">
