@@ -5820,7 +5820,7 @@ window.addEvent('domready', function() {
         Cookies.set( 'view-splash', true, { expires: 1 } );
     }
 
-    $('music-player-controller').addEvent('click', function( event ) {
+    $( 'music-player-controller' ).addEvent('click', function( event ) {
          
         event.stop();
         this.toggleClass( 'on' );
@@ -5837,10 +5837,15 @@ window.addEvent('domready', function() {
     });
 
     $$( '.navigation__pages__links' ).addEvent( 'click', function( event ){
+
         event.preventDefault();
-        var herf        = this.get( 'href' );
-        var pageTitle   = this.get( 'data-title' );
-           window.navigation( pageTitle, href );            
+
+        var herf        = event.target.get( 'href' );
+        var pageTitle   = event.target.get( 'data-title' );
+        
+        window.pageLoad( href );
+        window.navigation( pageTitle, href );            
+
       } )
     } );
    
@@ -5857,7 +5862,7 @@ window.addEvent('domready', function() {
 
         var server = new Request.HTML().get( '\wp-content\themes\double\includes' + href + '.php' );
         $( 'page-container' ).empty().inject( server );
-        
+
     }
 
 
