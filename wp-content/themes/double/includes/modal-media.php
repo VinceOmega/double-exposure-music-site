@@ -1,5 +1,3 @@
-<?php ob_start(); ?>
-
 <div class="container__media-page">
 
 <div class="container__media-page__video">
@@ -27,7 +25,3 @@
 </div>
 
 </div>
-
-<?php $html = ob_get_contents(); ob_clean();?>
-
-<?php var_dump($html); ?>
