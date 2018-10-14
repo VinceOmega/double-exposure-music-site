@@ -5868,7 +5868,7 @@ function pageLoad( href ){
         onSuccess( text, xml ){
             $( 'page-container' ).innerHTML( text );
         }
-    })
+    }),send();
 
 }
 
