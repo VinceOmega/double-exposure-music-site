@@ -1,4 +1,4 @@
-<?php ob_clean(); ?>
+<?php ob_start(); ?>
 
 <div class="container__media-page">
 
@@ -28,6 +28,6 @@
 
 </div>
 
-<?php $html = ob_get_contents(); ?>
+<?php $html = ob_get_contents(); ob_clean();?>
 
 <?php var_dump($html); ?>
