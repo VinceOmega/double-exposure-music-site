@@ -5861,14 +5861,8 @@ function navigation( page, url ) {
 function pageLoad( href ){
 
     var href = ( (  href === '/' ) ? 'home' : href.substring( 1, href.length ) );
-    var server = new Request({
-        method: 'get',
-        url: '/wp-content/themes/double/includes/modal-' + href + '.php',
-        link: 'ignore',
-        onSuccess( text, xml ){
-            $( 'page-container' ).innerHTML( text );
-        }
-    }).send();
+    $( 'page-container' ).set( 'load', { method: 'get' } );
+    $( 'page-container' ).load( '/wp-content/themes/double/includes/modal-' + href + '.php'  );
 
 }
 
