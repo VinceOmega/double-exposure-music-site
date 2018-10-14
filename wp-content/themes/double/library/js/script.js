@@ -5842,32 +5842,28 @@ window.addEvent('domready', function() {
 
         var herf        = event.target.get( 'href' );
         var pageTitle   = event.target.get( 'data-title' );
-        
+
         window.pageLoad( href );
         window.navigation( pageTitle, href );            
 
       } )
     } );
    
-    function navigation( page, url ) {
-       if ( typeof ( history.pushState ) != "undefined" ) {
-           var obj = { Page: page, Url: url };
-           history.pushState( obj, obj.Page, obj.Url );
-       } else {
-        $$( '.navigation__pages__links' ).removeEvent( 'click' );
-       }
+function navigation( page, url ) {
+    if ( typeof ( history.pushState ) != "undefined" ) {
+        var obj = { Page: page, Url: url };
+        history.pushState( obj, obj.Page, obj.Url );
+    } else {
+    $$( '.navigation__pages__links' ).removeEvent( 'click' );
     }
+}
 
-    function pageLoad( href ){
+function pageLoad( href ){
 
-        var server = new Request.HTML().get( '\wp-content\themes\double\includes' + href + '.php' );
-        $( 'page-container' ).empty().inject( server );
+    var server = new Request.HTML().get( '\wp-content\themes\double\includes' + href + '.php' );
+    $( 'page-container' ).empty().inject( server );
 
-    }
-
-
-    
-});
+}
 
 function controlForMusicPlayer( playButton, songTitle, musicTitle, music ){
 
