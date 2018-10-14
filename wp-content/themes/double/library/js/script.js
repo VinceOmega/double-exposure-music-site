@@ -5840,7 +5840,7 @@ window.addEvent('domready', function() {
 
         event.preventDefault();
 
-        var herf        = event.target.get( 'href' );
+        var href        = event.target.get( 'href' );
         var pageTitle   = event.target.get( 'data-title' );
 
         window.pageLoad( href );
