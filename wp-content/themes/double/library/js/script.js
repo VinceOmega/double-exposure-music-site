@@ -5795,8 +5795,8 @@ window.addEvent("domready", Mediabox.scanPage);
 window.addEvent('domready', function() {
 
     var playButton  = $( 'music-player-controller' );
-    var recordIcon  = $('record-icon');
-    var songTitle   = $('music-player-controller-title');
+    var recordIcon  = $( 'record-icon' );
+    var songTitle   = $( 'music-player-controller-title' );
     var music       = new Howl({
 
         src: ['/wp-content/themes/double/media/audio/sample.mp3'],
@@ -5847,7 +5847,7 @@ window.addEvent('domready', function() {
         window.navigation( pageTitle, href );            
 
       } )
-    } );
+} );
    
 function navigation( page, url ) {
     if ( typeof ( history.pushState ) != "undefined" ) {
