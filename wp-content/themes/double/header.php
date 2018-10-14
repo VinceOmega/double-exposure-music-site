@@ -51,7 +51,7 @@
 			
 			<header class="header" role="banner">
 						
-				<nav role="navigation">
+				<nav role="navigation" class="navigation">
 
 					<ul class="navigation__pages">
 						<li><a class="navigation__pages__links" href="/" 			data-title="home">Home</a></li>

@@ -176,7 +176,7 @@ body {
     color: white;
     font-weight: 500;
     background-color: transparent;
-    height: 50px;
+    height: auto;
 }
 
 .container__bio p a {
@@ -359,7 +359,9 @@ body {
 }
 
 .container__bio__text {
-    height: 200px;
+    height: auto;
+    display: block;
+    position: relative;
 }
 
 .container__bio__parallax-summer-1961 {
@@ -602,9 +604,6 @@ header {
 
 .splash-page{
     overflow: hidden;
-}
-
-.splash-page--not-seen{
     display: block;
     position: absolute;
     width: 100%;
@@ -622,13 +621,26 @@ header {
     top: 45%;
     font-family: 'Prisma', sans-serif;
     font-size: 60px;
+    opacity: 1.0;
+    transition: opacity 8s ease-in-out;
+    -webkit-transition: opacity 8s ease-in-out;
+    -moz-transition: opacity 8s ease-in-out;
+    -o-transition: opacity 8s ease-in-out;
+}
+
+.splash-page__title--hide{
+    opacity: 0;
+    transition: opacity 8s ease-in-out;
+    -webkit-transition: opacity 8s ease-in-out;
+    -moz-transition: opacity 8s ease-in-out;
+    -o-transition: opacity 8s ease-in-out;
 }
 
 .splash-page__top-tri-shape{
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 1200px 1200px 0 0;
+    border-width: 0 0 0 0;
     border-color: #ea00ff transparent transparent transparent;
     position: absolute;
     top: 0;
@@ -637,13 +649,16 @@ header {
     margin: 0;
     opacity: 1;
     transition: border-width 3s ease-in-out;
+    -webkit-transition: border-width 3s ease-in-out;
+    -moz-transition: border-width 3s ease-in-out;
+    -o-transition: border-width 3s ease-in-out;
 }
 
 .splash-page__bottom-tri-shape{
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 1200px 1200px;
+    border-width: 0 0 0 0;
     border-color: transparent transparent #ea00ff transparent;
     position: absolute;
     bottom: 0;
@@ -653,16 +668,25 @@ header {
     padding: 0;
     opacity: 1;
     transition: border-width 3s ease-in-out;
+    -webkit-transition: border-width 3s ease-in-out;
+    -moz-transition: border-width 3s ease-in-out;
+    -o-transition: border-width 3s ease-in-out;
 }
 
 .splash-page__top-tri-shape--closed{
     border-width: 1200px 1200px 0 0;
     transition: border-width 3s ease-in-out;
+    -webkit-transition: border-width 3s ease-in-out;
+    -moz-transition: border-width 3s ease-in-out;
+    -o-transition: border-width 3s ease-in-out;
 }
 
 .splash-page__bottom-tri-shape--closed{
     border-width: 0 0 1200px 1200px;
     transition: border-width 3s ease-in-out;
+    -webkit-transition: border-width 3s ease-in-out;
+    -moz-transition: border-width 3s ease-in-out;
+    -o-transition: border-width 3s ease-in-out;
 }
 
 .splash-page__top-tri-shape--open{
@@ -681,6 +705,9 @@ header {
         margin-top: 10%;
         color: white;
         font-size: 15px;
+        height: auto;
+        display: block;
+        position: relative;
     }
 
     .container__bio__text {

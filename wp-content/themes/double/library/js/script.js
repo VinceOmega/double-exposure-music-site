@@ -5808,10 +5808,16 @@ window.addEvent('domready', function() {
     musicTitle      = musicTitle[ musicTitle.length - 1 ].split( '.' )[ 0 ];
     musicTitle      = musicTitle.replace( '-', ' ' );
 
-    if( Cookie.get( 'view-splash' ) != 'undefined' ){
-        window.controlForMusicPlayer();
-    } else {
+    console.log( typeof( Cookies.get( 'view-splash' ) ) );
 
+    if( typeof( Cookies.get( 'view-splash' ) ) != 'undefined' ){
+        console.log( 'cookie' );
+        window.controlForMusicPlayer( playButton, songTitle, musicTitle, music );       
+    } else {
+        console.log( 'no cookie' );
+        window.splashPageControl();
+        window.controlForMusicPlayer( playButton, songTitle, musicTitle, music );
+        Cookies.set( 'view-splash', true, { expires: 1 } );
     }
 
     $('music-player-controller').addEvent('click', function( event ) {
@@ -5819,6 +5825,7 @@ window.addEvent('domready', function() {
         event.stop();
         this.toggleClass( 'on' );
         recordIcon.toggleClass( 'rotate' );
+
         if( this.hasClass( 'on' )){
             this.text = 'On';
             music.mute(false);
@@ -5829,9 +5836,36 @@ window.addEvent('domready', function() {
 
     });
 
+    $$( '.navigation__pages__links' ).addEvent( 'click', function( event ){
+        event.preventDefault();
+        var herf        = this.get( 'href' );
+        var pageTitle   = this.get( 'data-title' );
+           window.navigation( pageTitle, href );            
+      } )
+    } );
+   
+    function navigation( page, url ) {
+       if ( typeof ( history.pushState ) != "undefined" ) {
+           var obj = { Page: page, Url: url };
+           history.pushState( obj, obj.Page, obj.Url );
+       } else {
+        $$( '.navigation__pages__links' ).removeEvent( 'click' );
+       }
+    }
+
+    function pageLoad( href ){
+
+        var server = new Request.HTML().get( '\wp-content\themes\double\includes' + href + '.php' );
+        $( 'page-container' ).empty().inject( server );
+        
+    }
+
+
+    
 });
 
-function controlForMusicPlayer(){
+function controlForMusicPlayer( playButton, songTitle, musicTitle, music ){
+
     if( playButton.hasClass( 'on' ) ){
 
         playButton.text = 'On';
@@ -5845,3 +5879,33 @@ function controlForMusicPlayer(){
 
     }    
 }
+
+function splashPageControl(){
+
+    splashPageControl__hideHeader.delay( 5000 );
+    splashPageControl__topTriangleAnimate.delay( 9500 );
+    splashPageControl__bottomTraingerAnimate.delay( 9500 );
+    splashPageControl__destoryContainer.delay( 15000 );
+}
+
+function splashPageControl__hideHeader(){
+    $( 'splash-page-header' )
+        .addClass( 'splash-page__title--hide' );
+}
+
+function splashPageControl__topTriangleAnimate(){
+    $( 'splash-page' )
+        .getElement( '.splash-page__top-tri-shape' )
+        .removeClass( 'splash-page__top-tri-shape--closed' );
+}
+
+function splashPageControl__bottomTraingerAnimate(){
+    $( 'splash-page' )
+        .getElement( '.splash-page__bottom-tri-shape' )
+        .removeClass( 'splash-page__bottom-tri-shape--closed' );
+}
+
+function splashPageControl__destoryContainer(){
+    $( 'splash-page' ).destroy();
+}
+
