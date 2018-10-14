@@ -29,7 +29,7 @@
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
-		<?php set_include_path ( __DIR__ ) ?>
+		<?php set_include_path ( __DIR__ ."/" ) ?>
 
 		<!-- end of wordpress head -->
 			
