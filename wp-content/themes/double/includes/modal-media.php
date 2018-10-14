@@ -1,4 +1,4 @@
-<?php header( 'Content-type: text/html; charset=utf-8' );?>
+<?php ob_clean(); ?>
 
 <div class="container__media-page">
 
@@ -27,3 +27,7 @@
 </div>
 
 </div>
+
+<?php $html = ob_get_contents(); ?>
+
+<?php var_dump($html); ?>
