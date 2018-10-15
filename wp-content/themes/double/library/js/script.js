@@ -5861,9 +5861,9 @@ function navigation( page, url ) {
 function pageLoad( href ){
 
     var href = ( (  href === '/' ) ? 'home' : href.substring( 1, href.length ) );
-    $( 'page-container' ).set( 'load', { method: 'post' } );
-    $( 'page-container' ).load( '/wp-content/themes/double/includes/modal-' + href + '.php'  );
-
+    //$( 'page-container' ).set( 'load', { method: 'get' } );
+    //$( 'page-container' ).load( '/wp-content/themes/double/includes/modal-' + href + '.php'  );
+    var server = new Request.HTML({ method: 'get', update: 'page-container', link: 'ignore' }).send();
 }
 
 function controlForMusicPlayer( playButton, songTitle, musicTitle, music ){
