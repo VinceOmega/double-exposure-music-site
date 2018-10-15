@@ -5854,7 +5854,7 @@ function navigation( page, url ) {
         var obj = { Page: page, Url: url };
         history.pushState( obj, obj.Page, obj.Url );
     } else {
-    $$( '.navigation__pages__links' ).removeEvent( 'click' );
+        $$( '.navigation__pages__links' ).removeEvent( 'click' );
     }
 }
 
@@ -5863,7 +5863,19 @@ function pageLoad( href ){
     var href = ( (  href === '/' ) ? 'home' : href.substring( 1, href.length ) );
     //$( 'page-container' ).set( 'load', { method: 'get' } );
     //$( 'page-container' ).load( '/wp-content/themes/double/includes/modal-' + href + '.php'  );
-    var server = new Request.HTML({ method: 'get', update: 'page-container', link: 'ignore' });
+    var server = new Request.HTML(
+        { 
+            method: 'get', 
+            link: 'ignore',
+            onSuccess: function( tree, ele, html, js ){
+                    $( 'page-container' ).empty().injectHTML( 'html' );
+                    console.log( tree );
+                    console.log( ele );
+                    console.log( html );
+                    console.log( js );
+            } 
+        }
+    );
     server.send();
 }
 
