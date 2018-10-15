@@ -101,7 +101,7 @@ if ( is_user_logged_in() ) {
 } else {
 	// If no action is registered, return a Bad Request response.
 	if ( ! has_action( 'wp_ajax_nopriv_' . $_REQUEST['action'] ) ) {
-		wp_die( '0', 400 );
+		//wp_die( '0', 400 );
 	}
 
 	/**
