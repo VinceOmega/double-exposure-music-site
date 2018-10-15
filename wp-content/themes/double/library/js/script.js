@@ -5863,7 +5863,8 @@ function pageLoad( href ){
     var href = ( (  href === '/' ) ? 'home' : href.substring( 1, href.length ) );
     //$( 'page-container' ).set( 'load', { method: 'get' } );
     //$( 'page-container' ).load( '/wp-content/themes/double/includes/modal-' + href + '.php'  );
-    var server = new Request.HTML({ method: 'get', update: 'page-container', link: 'ignore' }).send();
+    var server = new Request.HTML({ method: 'get', update: 'page-container', link: 'ignore' });
+    server.send();
 }
 
 function controlForMusicPlayer( playButton, songTitle, musicTitle, music ){
