@@ -5838,7 +5838,7 @@ window.addEvent('domready', function() {
 
     $$( '.navigation__pages__links' ).addEvent( 'click', function( event ){
 
-        event.preventDefault();
+        event.stop();
 
         var href        = event.target.get( 'href' );
         var pageTitle   = event.target.get( 'data-title' );
@@ -5852,7 +5852,8 @@ window.addEvent('domready', function() {
 function navigation( page, url ) {
     if ( typeof ( history.pushState ) != "undefined" ) {
         var obj = { Page: page, Url: url };
-        history.pushState( obj, obj.Page, obj.Url );
+        document.title = obj.page;
+        window.history.pushState( null, '', obj.Url );
     } else {
         $$( '.navigation__pages__links' ).removeEvent( 'click' );
     }
