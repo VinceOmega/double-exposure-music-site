@@ -5868,11 +5868,12 @@ function pageLoad( href ){
             method: 'get', 
             link: 'ignore',
             onSuccess: function( tree, ele, html, js ){
-                    $( 'page-container' ).empty().injectHTML( 'html' );
                     console.log( tree );
                     console.log( ele );
                     console.log( html );
                     console.log( js );
+                    $( 'page-container' ).empty().set( 'html', html );
+
             } 
         }
     );
