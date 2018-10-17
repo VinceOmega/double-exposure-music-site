@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
-<?php if( $_GET[ 'include' ] ){ include '/wp-includes/shortcodes.php'; } ?>
+<?php if( isset( $_GET[ 'includes' ] ) && $_GET[ 'includes' ] ){ include '/wp-includes/shortcodes.php'; } ?>
 
 <div class="container__contact-us">
 
