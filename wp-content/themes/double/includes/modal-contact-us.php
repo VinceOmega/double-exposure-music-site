@@ -2,6 +2,7 @@
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
+error_reporting(0);
 ?>
 
 <?php if( isset( $_GET[ 'includes' ] ) && $_GET[ 'includes' ] ){  
