@@ -5868,7 +5868,8 @@ function pageLoad( href ){
         { 
             method: 'get', 
             link: 'ignore',
-            url: '/wp-content/themes/double/includes/modal-' + href + '.php',
+            url: 'wp-content/themes/double/includes/modal-' + href + '.php',
+            data: { includes: true },
             onSuccess: function( tree, ele, html, js ){
                     console.log( tree );
                     console.log( ele );
