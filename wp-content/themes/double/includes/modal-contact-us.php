@@ -5,8 +5,9 @@ error_reporting(E_ALL);
 ?>
 
 <?php if( isset( $_GET[ 'includes' ] ) && $_GET[ 'includes' ] ){  
-   set_include_path( '/home/redrobo2/public_html/double/' );
-   include 'wp-includes/shortcodes.php'; 
+   //set_include_path( '/home/redrobo2/public_html/double/' );
+   //include 'wp-includes/shortcodes.php';
+   include require_once(rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/wp-load.php'); 
 } ?>
 
 <div class="container__contact-us">
