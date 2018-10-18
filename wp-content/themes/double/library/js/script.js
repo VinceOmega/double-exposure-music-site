@@ -5846,7 +5846,7 @@ window.addEvent('domready', function() {
         window.transition(  );
         window.pageLoad( href );
         window.navigation( pageTitle, href );
-        window.transition.delay( 500 );            
+        window.transition.delay( 6000 );            
 
       } )
 } );
