@@ -559,6 +559,10 @@ header {
     padding: 0;
     margin: 0;
     opacity: .8;
+    transition: border-width 3s ease-in-out;
+    -webkit-transition: border-width 3s ease-in-out;
+    -moz-transition: border-width 3s ease-in-out;
+    -o-transition: border-width 3s ease-in-out;
 }
 
 .navigation__tri-shape--closed{
@@ -636,6 +640,10 @@ header {
     margin: 0;
     padding: 0;
     opacity: .8;
+    transition: border-width 3s ease-in-out;
+    -webkit-transition: border-width 3s ease-in-out;
+    -moz-transition: border-width 3s ease-in-out;
+    -o-transition: border-width 3s ease-in-out;
 }
 
 .footer__tri-shape--closed{
