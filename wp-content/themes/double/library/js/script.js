@@ -5844,8 +5844,10 @@ window.addEvent('domready', function() {
         var pageTitle   = event.target.get( 'data-title' );
 
         window.transition( );
-        window.pageLoad( href ).delay( 3000 );
-        window.navigation( pageTitle, href ).delay( 3000 );
+        var loadPage    = window.pageLoad( href );
+        var loadNav     = window.navigation( pageTitle, href );
+        loadPage.delay( 3000 );
+        loadNav.delay( 3000 );
         window.transition.delay( 6000 );            
 
       } )
