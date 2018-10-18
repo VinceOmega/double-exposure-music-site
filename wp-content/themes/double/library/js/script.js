@@ -5863,9 +5863,10 @@ function navigation( page, url ) {
 
 function transition( ){
 
-    $( '.navigation__pages' ).toggleClass( '.navigation__pages--transition' );
-    $( '.navigation__tri-shape' ).toggleClass( '.header__tri-shape--closed' );
-    $( '.footer__tri-shape' ).toggleClass( '.footer__tri-shape--closed' );
+    $$( '.navigation__pages' ).toggleClass( '.navigation__pages--transition' );
+    $$( '.footer__music' ).toggleClass( '.footer__music--transition' );
+    $$( '.navigation__tri-shape' ).toggleClass( '.header__tri-shape--closed' );
+    $$( '.footer__tri-shape' ).toggleClass( '.footer__tri-shape--closed' );
 
 
 }
