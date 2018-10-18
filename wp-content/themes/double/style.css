@@ -520,6 +520,20 @@ header {
     color: white;
     position: absolute;
     z-index: 30;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+}
+
+.navigation__pages--transition{
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+
 }
 
 .navigation__pages li {
@@ -545,6 +559,14 @@ header {
     padding: 0;
     margin: 0;
     opacity: .8;
+}
+
+.navigation__tri-shape--closed{
+    border-width: 0 0 0 0;
+    transition: border-width 3s ease-in-out;
+    -webkit-transition: border-width 3s ease-in-out;
+    -moz-transition: border-width 3s ease-in-out;
+    -o-transition: border-width 3s ease-in-out;
 }
 
 .footer {
@@ -600,6 +622,14 @@ header {
     margin: 0;
     padding: 0;
     opacity: .8;
+}
+
+.footer__tri-shape--closed{
+    border-width: 0 0 0 0;
+    transition: border-width 3s ease-in-out;
+    -webkit-transition: border-width 3s ease-in-out;
+    -moz-transition: border-width 3s ease-in-out;
+    -o-transition: border-width 3s ease-in-out;
 }
 
 .splash-page{

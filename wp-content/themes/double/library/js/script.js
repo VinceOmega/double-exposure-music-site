@@ -5843,8 +5843,10 @@ window.addEvent('domready', function() {
         var href        = event.target.get( 'href' );
         var pageTitle   = event.target.get( 'data-title' );
 
+        window.transition(  );
         window.pageLoad( href );
-        window.navigation( pageTitle, href );            
+        window.navigation( pageTitle, href );
+        window.transition.delay( 500 );            
 
       } )
 } );
@@ -5859,28 +5861,44 @@ function navigation( page, url ) {
     }
 }
 
+function transition( ){
+
+    $( '.navigation__pages' ).toggleClass( '.navigation__pages--transition' );
+    $( '.navigation__tri-shape' ).toggleClass( '.header__tri-shape--closed' );
+    $( '.footer__tri-shape' ).toggleClass( '.footer__tri-shape--closed' );
+
+
+}
+
 function pageLoad( href ){
 
+    var debug = false;
+
     var href = ( (  href === '/' ) ? 'home' : href.substring( 1, href.length ) );
-    //$( 'page-container' ).set( 'load', { method: 'get' } );
-    //$( 'page-container' ).load( '/wp-content/themes/double/includes/modal-' + href + '.php'  );
-    var server = new Request.HTML(
+    $( 'page-container' ).set( 'load', { method: 'get' } );
+    $( 'page-container' ).load( '/wp-content/themes/double/includes/modal-' + href + '.php?includes=true'  );
+
+    /*var server = new Request.HTML(
         { 
             method: 'get', 
             link: 'ignore',
             url: '/wp-content/themes/double/includes/modal-' + href + '.php',
             data: { includes: true },
             onSuccess: function( tree, ele, html, js ){
+                   if(debug){
+
                     console.log( tree );
                     console.log( ele );
                     console.log( html );
                     console.log( js );
+
+                   }
                     $( 'page-container' ).empty().set( 'html', html );
 
             } 
         }
     );
-    server.send();
+    server.send(); */
 }
 
 function controlForMusicPlayer( playButton, songTitle, musicTitle, music ){
