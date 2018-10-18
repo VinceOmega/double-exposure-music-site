@@ -5870,7 +5870,7 @@ function transition( ){
         el.toggleClass( 'footer__music--transition' );
     } );
     $$( '.navigation__tri-shape' ).each( function( el ){
-        el.toggleClass( 'header__tri-shape--closed' );
+        el.toggleClass( 'navigation__tri-shape--closed' );
     } );
     $$( '.footer__tri-shape' ).each( function( el ){
         el.toggleClass( 'footer__tri-shape--closed' );

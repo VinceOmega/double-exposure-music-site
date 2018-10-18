@@ -562,7 +562,7 @@ header {
 }
 
 .navigation__tri-shape--closed{
-    border-width: 0 0 0 0;
+    border-width: 1200px 1200px 0 0;
     transition: border-width 3s ease-in-out;
     -webkit-transition: border-width 3s ease-in-out;
     -moz-transition: border-width 3s ease-in-out;
@@ -639,7 +639,7 @@ header {
 }
 
 .footer__tri-shape--closed{
-    border-width: 0 0 0 0;
+    border-width: 0 0 1200px 1200px;
     transition: border-width 3s ease-in-out;
     -webkit-transition: border-width 3s ease-in-out;
     -moz-transition: border-width 3s ease-in-out;
