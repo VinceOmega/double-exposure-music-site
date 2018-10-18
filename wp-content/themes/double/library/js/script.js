@@ -5863,10 +5863,18 @@ function navigation( page, url ) {
 
 function transition( ){
 
-    $$( '.navigation__pages' ).toggleClass( 'navigation__pages--transition' );
-    $$( '.footer__music' ).toggleClass( 'footer__music--transition' );
-    $$( '.navigation__tri-shape' ).toggleClass( 'header__tri-shape--closed' );
-    $$( '.footer__tri-shape' ).toggleClass( 'footer__tri-shape--closed' );
+    $$( '.navigation__pages' ).each( function( el ){
+        el.toggleClass( 'navigation__pages--transition' );
+    } );
+    $$( '.footer__music' ).each( function( el ){
+        el.toggleClass( 'footer__music--transition' );
+    } );
+    $$( '.navigation__tri-shape' ).each( function( el ){
+        el.toggleClass( 'header__tri-shape--closed' );
+    } );
+    $$( '.footer__tri-shape' ).each( function( el ){
+        el.toggleClass( 'footer__tri-shape--closed' );
+    } );
 
 
 }
