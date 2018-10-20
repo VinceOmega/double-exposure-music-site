@@ -5807,7 +5807,7 @@ window.addEvent('domready', function() {
             if( debug ) console.log( text );
             listOfSongs = $$( text ).getElements( 'li' );
             listOfSongs.erase( listOfSongs[ 0 ] );
-            if( debug );
+            if( debug ) console.log( listOfSongs );
         }
     }).send( );
 
