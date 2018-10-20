@@ -5794,7 +5794,7 @@ window.addEvent("domready", Mediabox.scanPage);
 
 window.addEvent('domready', function() {
 
-    var debug       = false;
+    var debug       = true;
     var playButton  = $( 'music-player-controller' );
     var recordIcon  = $( 'record-icon' );
     var songTitle   = $( 'music-player-controller-title' );
@@ -5802,6 +5802,7 @@ window.addEvent('domready', function() {
         url: '/wp-content/themes/double/media/audio/',
         method: 'get',
         onSuccess: function( text, xml ){
+            var debug = true;
             if( debug ) console.log( text );
         }
     }).send( );
