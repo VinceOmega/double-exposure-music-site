@@ -5798,14 +5798,20 @@ window.addEvent('domready', function() {
     var playButton  = $( 'music-player-controller' );
     var recordIcon  = $( 'record-icon' );
     var songTitle   = $( 'music-player-controller-title' );
+    var listOfSongs = '';
     var file        = new Request({
         url: '/wp-content/themes/double/media/audio/',
         method: 'get',
         onSuccess: function( text, xml ){
             var debug = true;
             if( debug ) console.log( text );
+            listOfSongs = text.getElements( 'li' );
+            listOfSongs.erase( listOfSongs[ 0 ] );
+            if( debug );
         }
     }).send( );
+
+
     var music       = new Howl({
 
         src: ['/wp-content/themes/double/media/audio/sample.mp3'],
