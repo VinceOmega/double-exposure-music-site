@@ -5805,7 +5805,7 @@ window.addEvent('domready', function() {
         onSuccess: function( text, xml ){
             var debug = true;
             if( debug ) console.log( text );
-            listOfSongs = text.getElements( 'li' );
+            listOfSongs = $$( text ).getElements( 'li' );
             listOfSongs.erase( listOfSongs[ 0 ] );
             if( debug );
         }
