@@ -5794,9 +5794,11 @@ window.addEvent("domready", Mediabox.scanPage);
 
 window.addEvent('domready', function() {
 
+    var debug       = false;
     var playButton  = $( 'music-player-controller' );
     var recordIcon  = $( 'record-icon' );
     var songTitle   = $( 'music-player-controller-title' );
+    var file        = new Request().get( '/wp-content/themes/double/media/audio/');
     var music       = new Howl({
 
         src: ['/wp-content/themes/double/media/audio/sample.mp3'],
@@ -5804,6 +5806,8 @@ window.addEvent('domready', function() {
         
       });      
     var musicTitle  = music._src.split( '/' );
+
+      if( debug ) file;
 
     musicTitle      = musicTitle[ musicTitle.length - 1 ].split( '.' )[ 0 ];
     musicTitle      = musicTitle.replace( '-', ' ' );
@@ -5887,27 +5891,7 @@ function pageLoad( href ){
     $( 'page-container' ).set( 'load', { method: 'get' } );
     $( 'page-container' ).load( '/wp-content/themes/double/includes/modal-' + href + '.php?includes=true'  );
 
-    /*var server = new Request.HTML(
-        { 
-            method: 'get', 
-            link: 'ignore',
-            url: '/wp-content/themes/double/includes/modal-' + href + '.php',
-            data: { includes: true },
-            onSuccess: function( tree, ele, html, js ){
-                   if(debug){
-
-                    console.log( tree );
-                    console.log( ele );
-                    console.log( html );
-                    console.log( js );
-
-                   }
-                    $( 'page-container' ).empty().set( 'html', html );
-
-            } 
-        }
-    );
-    server.send(); */
+    
 }
 
 function controlForMusicPlayer( playButton, songTitle, musicTitle, music ){
