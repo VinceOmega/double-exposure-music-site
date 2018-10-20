@@ -5798,7 +5798,13 @@ window.addEvent('domready', function() {
     var playButton  = $( 'music-player-controller' );
     var recordIcon  = $( 'record-icon' );
     var songTitle   = $( 'music-player-controller-title' );
-    var file        = new Request().get( '/wp-content/themes/double/media/audio/');
+    var file        = new Request({
+        url: '/wp-content/themes/double/media/audio/',
+        method: 'get',
+        onSuccess: function( text, xml ){
+            if( debug ) console.log( text );
+        }
+    }).send( );
     var music       = new Howl({
 
         src: ['/wp-content/themes/double/media/audio/sample.mp3'],
@@ -5807,7 +5813,7 @@ window.addEvent('domready', function() {
       });      
     var musicTitle  = music._src.split( '/' );
 
-      if( debug ) console.log( file );
+     
 
     musicTitle      = musicTitle[ musicTitle.length - 1 ].split( '.' )[ 0 ];
     musicTitle      = musicTitle.replace( '-', ' ' );
