@@ -5807,7 +5807,7 @@ window.addEvent('domready', function() {
       });      
     var musicTitle  = music._src.split( '/' );
 
-      if( debug ) file;
+      if( debug ) console.log( file );
 
     musicTitle      = musicTitle[ musicTitle.length - 1 ].split( '.' )[ 0 ];
     musicTitle      = musicTitle.replace( '-', ' ' );
