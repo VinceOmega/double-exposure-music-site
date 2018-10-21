@@ -5794,12 +5794,14 @@ window.addEvent("domready", Mediabox.scanPage);
 
 window.addEvent('domready', function() {
 
-    var debug       = true;
-    var playButton  = $( 'music-player-controller' );
-    var recordIcon  = $( 'record-icon' );
-    var songTitle   = $( 'music-player-controller-title' );
-    var listOfSongs = '';
-    var file        = new Request({
+    var debug           = true;
+    var playButton      = $( 'music-player-controller' );
+    var recordIcon      = $( 'record-icon' );
+    var songTitle       = $( 'music-player-controller-title' );
+    var listOfSongs     = '';
+    var arrayOfSongs    = [];
+    var music, musicTitle;
+    var file            = new Request( {
         url: '/wp-content/themes/double/media/audio/',
         method: 'get',
         onSuccess: function( text, xml ){
@@ -5807,35 +5809,48 @@ window.addEvent('domready', function() {
             if( debug ) console.log( text );
             listOfSongs = Elements.from( text ).getElements( 'a' );
             listOfSongs.erase( listOfSongs[ 0 ] );
+            listOfSongs.erase( listOfSongs[ 0 ] );
             if( debug ) console.log( listOfSongs );
+            listOfSongs[ 0 ].each( function( song ){
+
+                if( debug ) console.log( /\.mp3/.test( decodeURI( song.get( 'href' ) ) ) );
+
+                if( /\.mp3/.test( decodeURI( song.get( 'href' ) ) ) ){
+                    if( debug ) console.log( decodeURI( song.get( 'href' ) ) );
+                    arrayOfSongs.push( '/wp-content/themes/double/media/audio/' + decodeURI( song.get( 'href' ) ) );
+                }
+
+            } );
+
+                var randomSong = arrayOfSongs[ Math.floor(Math.random()*arrayOfSongs.length) ];
+
+                music       = new Howl({
+
+                    //src: ['/wp-content/themes/double/media/audio/sample.mp3'],
+                    src: [ randomSong ],
+                    loop: true
+                    
+                  });
+
+                musicTitle  = music._src.split( '/' );
+                musicTitle  = musicTitle[ musicTitle.length - 1 ].split( '.' )[ 0 ];
+                musicTitle  = musicTitle.replace( '-', ' ' );
+
+                console.log( typeof( Cookies.get( 'view-splash' ) ) );
+
+                if( typeof( Cookies.get( 'view-splash' ) ) != 'undefined' ){
+                    console.log( 'cookie' );
+                    window.controlForMusicPlayer( playButton, songTitle, musicTitle, music );       
+                } else {
+                    console.log( 'no cookie' );
+                    window.splashPageControl();
+                    window.controlForMusicPlayer( playButton, songTitle, musicTitle, music );
+                    Cookies.set( 'view-splash', true, { expires: 1 } );
+                }
         }
-    }).send( );
 
+    } ).send( );
 
-    var music       = new Howl({
-
-        src: ['/wp-content/themes/double/media/audio/sample.mp3'],
-        loop: true
-        
-      });      
-    var musicTitle  = music._src.split( '/' );
-
-     
-
-    musicTitle      = musicTitle[ musicTitle.length - 1 ].split( '.' )[ 0 ];
-    musicTitle      = musicTitle.replace( '-', ' ' );
-
-    console.log( typeof( Cookies.get( 'view-splash' ) ) );
-
-    if( typeof( Cookies.get( 'view-splash' ) ) != 'undefined' ){
-        console.log( 'cookie' );
-        window.controlForMusicPlayer( playButton, songTitle, musicTitle, music );       
-    } else {
-        console.log( 'no cookie' );
-        window.splashPageControl();
-        window.controlForMusicPlayer( playButton, songTitle, musicTitle, music );
-        Cookies.set( 'view-splash', true, { expires: 1 } );
-    }
 
     $( 'music-player-controller' ).addEvent('click', function( event ) {
          
@@ -5914,6 +5929,7 @@ function controlForMusicPlayer( playButton, songTitle, musicTitle, music ){
         playButton.text = 'On';
         songTitle.set( 'text', musicTitle );
         music.play();
+        
 
     } else {
 
