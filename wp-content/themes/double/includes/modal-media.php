@@ -24,27 +24,30 @@ for( $i = count( $songArray ) - 1; $i > 1; $i-- ){
  }
 //var_dump( $dir );
 //var_dump( $albumArray );
-var_dump( $albumArrayMirrored );
-var_dump( $songArrayMirrored )
+//var_dump( $albumArrayMirrored );
+//var_dump( $songArrayMirrored )
 ?>
 
 
 <div class="container__media-page">
 
-    <!---
-    <div class="container__media-page__video">
-        <div class="container__media-page__video__image">
-            <a href="wp-content/themes/double/media/video/sample.mp4" class="" media="" media-src="" rel="lightbox[Example Video 50% 70%]" title="Example Video"><img src="https://placeimg.com/320/150/any"></a>
-            <div class="container__media-page__video__play">
-                <span><i class="fas fa-play-circle"></i>Play Video</span>
+    <?php 
+
+    /*
+        <div class="container__media-page__video">
+            <div class="container__media-page__video__image">
+                <a href="wp-content/themes/double/media/video/sample.mp4" class="" media="" media-src="" rel="lightbox[Example Video 50% 70%]" title="Example Video"><img src="https://placeimg.com/320/150/any"></a>
+                <div class="container__media-page__video__play">
+                    <span><i class="fas fa-play-circle"></i>Play Video</span>
+                </div>
+            </div>
+            <div class="container__media-page__video__description">
+                Incididunt adipisicing ad sint sit fugiat aute cupidatat sit minim sint.
             </div>
         </div>
-        <div class="container__media-page__video__description">
-            Incididunt adipisicing ad sint sit fugiat aute cupidatat sit minim sint.
-        </div>
-    </div>
-    --->
+    */
 
+    ?>
     <?php for( $i = 0; $i < count( $songArrayMirrored ) -1; $i++ ){?>
 
         <div class="container__media-page__audio">
