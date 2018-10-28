@@ -49,7 +49,7 @@ var_dump( $songArrayMirrored )
 
         <div class="container__media-page__audio">
             <div class="container__media-page__audio__image">
-                <a href="/wp-content/themes/double/media/audio/<?php echo urlencode( $songArrayMirrored[ $i ] ); ?>" class="" media="" media-src="" rel="lightbox[Example Audio 50% 70%]" title="Example Video" style="background-image: url('/wp-content/themes/double/media/album/<?php echo $albumArrayMirrored[ $i ] . '.png'; ?>');"></a>
+                <a href="/wp-content/themes/double/media/audio/<?php echo urlencode( $albumArrayMirrored[ $i ] ) . " - " . urlencode( $songArrayMirrored[ $i ] ); ?>" class="" media="" media-src="" rel="lightbox[Example Audio 50% 70%]" title="Example Video" style="background-image: url('/wp-content/themes/double/media/album/<?php echo $albumArrayMirrored[ $i ] . '.png'; ?>');"></a>
                 <div class="container__media-page__audio__play">
                     <span><i class="fas fa-play-circle"></i>Play Audio</span>
                 </div>
