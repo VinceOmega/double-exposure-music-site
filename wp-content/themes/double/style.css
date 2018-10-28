@@ -768,3 +768,13 @@ header {
 
 
 }
+
+
+@media only screen and (max-width: 420px){
+
+    .container_media-page__video,
+    .container__media-page__audio {
+        height: auto;
+    }
+
+}
