@@ -772,8 +772,8 @@ header {
 
 @media only screen and (max-width: 630px){
 
-    .container_media-page__video,
-    .container__media-page__audio {
+    div.container__media-page div.container_media-page__video,
+    div.container__media-page div.container__media-page__audio {
         height: auto;
     }
 
