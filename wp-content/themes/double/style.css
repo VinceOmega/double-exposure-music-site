@@ -595,6 +595,14 @@ header {
     -o-transition: opacity 2s ease-in-out;
 }
 
+.footer__music__record{
+    height: 30px;
+}
+
+.footer__music__info{
+    overflow: hidden;
+}
+
 .footer__music--transition{
     opacity: 0;
     transition: opacity 2s ease-in-out;
@@ -613,7 +621,6 @@ header {
 
 .footer__music__header {
     position: relative;
-    right: 90px;
     font-weight: 700;
     color: black;
     letter-spacing: 1px;
@@ -622,7 +629,6 @@ header {
 
 .footer__music__name-display {
     position: relative;
-    right: 90px;
     font-weight: 500;
     color: black;
 }
