@@ -26,14 +26,14 @@ for( $i = count( $songArray ) - 1; $i >= 0; $i-- ){
  for( $i = count( $dir ) - 1; $i > 1; $i-- ){
     array_push( $descriptionArray, $dir[ $i ] );
  }
-
+/*
 echo "<pre>";
 print_r( $descriptionArray );
 print_r( $albumArray );
 print_r( $albumArrayMirrored );
 print_r( $songArrayMirrored );
 echo "</pre>";
-
+*/
 ?>
 
 
