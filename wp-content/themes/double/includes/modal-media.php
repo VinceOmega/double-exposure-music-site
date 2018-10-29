@@ -19,13 +19,17 @@ foreach( $dir as $dirkey => $dirvalue ){
 for( $i = count( $albumArray ) - 1; $i > 1; $i-- ){
    array_push( $albumArrayMirrored, $albumArray[ $i ] );
 }
-for( $i = count( $songArray ) - 1; $i > 1; $i-- ){
+for( $i = count( $songArray ) - 1; $i >= 0; $i-- ){
     array_push( $songArrayMirrored, $songArray[ $i ] );
  }
-//var_dump( $dir );
-//var_dump( $albumArray );
-//var_dump( $albumArrayMirrored );
-//var_dump( $songArrayMirrored )
+ /*
+echo "<pre>";
+print_r( $dir );
+print_r( $albumArray );
+print_r( $albumArrayMirrored );
+print_r( $songArrayMirrored );
+echo "</pre>";
+*/
 ?>
 
 
@@ -48,11 +52,11 @@ for( $i = count( $songArray ) - 1; $i > 1; $i-- ){
     */
 
     ?>
-    <?php for( $i = 0; $i < count( $songArrayMirrored ) -1; $i++ ){?>
+    <?php for( $i = 0; $i <= count( $songArrayMirrored ) - 1; $i++ ){?>
 
         <div class="container__media-page__audio">
             <div class="container__media-page__audio__image">
-                <a href="/wp-content/themes/double/media/audio/<?php echo urlencode( $albumArrayMirrored[ $i ] ) . " - " . urlencode( $songArrayMirrored[ $i ] ); ?>" class="" media="" media-src="" rel="lightbox[Example Audio 50% 70%]" title="Example Video" style="background-image: url('/wp-content/themes/double/media/album/<?php echo $albumArrayMirrored[ $i ] . '.png'; ?>');"></a>
+                <a href="/wp-content/themes/double/media/audio/<?php echo urlencode( $albumArrayMirrored[ $i ] ) . " - " . urlencode( $songArrayMirrored[ $i ] ); ?>" class="" media="" media-src="" rel="lightbox[Example Audio 50% 70%]" title="Example Video" style="background-image: url('wp-content/themes/double/media/album/<?php echo $albumArrayMirrored[ $i ] . '.png'; ?>');"></a>
                 <div class="container__media-page__audio__play">
                     <span><i class="fas fa-play-circle"></i>Play Audio</span>
                 </div>
