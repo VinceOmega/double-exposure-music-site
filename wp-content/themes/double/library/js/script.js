@@ -5802,7 +5802,7 @@ window.addEvent('domready', function() {
     var arrayOfSongs    = [];
     var music, musicTitle;
     var file            = new Request( {
-        url: '/wp-content/themes/double/media/audio/',
+        url: window.location.href + 'wp-content/themes/double/media/audio/',
         method: 'get',
         onSuccess: function( text, xml ){
             var debug = true;
@@ -5817,7 +5817,7 @@ window.addEvent('domready', function() {
 
                 if( /\.mp3/.test( decodeURI( song.get( 'href' ) ) ) ){
                     if( debug ) console.log( decodeURI( song.get( 'href' ) ) );
-                    arrayOfSongs.push( '/wp-content/themes/double/media/audio/' + decodeURI( song.get( 'href' ) ) );
+                    arrayOfSongs.push( window.location.href + 'wp-content/themes/double/media/audio/' + decodeURI( song.get( 'href' ) ) );
                 }
 
             } );
@@ -5851,6 +5851,9 @@ window.addEvent('domready', function() {
 
     } ).send( );
 
+    setTimeout(function(){
+        $( 'home-video' ).play();
+      }, 5000);
 
     $( 'music-player-controller' ).addEvent('click', function( event ) {
          

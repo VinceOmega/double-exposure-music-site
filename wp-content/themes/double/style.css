@@ -566,7 +566,7 @@ header {
 }
 
 .navigation__tri-shape--closed{
-    border-width: 1200px 1200px 0 0;
+    border-width: 77vw 77vw 0 0;
     transition: border-width 3s ease-in-out;
     -webkit-transition: border-width 3s ease-in-out;
     -moz-transition: border-width 3s ease-in-out;
@@ -614,7 +614,7 @@ header {
 
 .footer__music__vinyl {
     position: absolute;
-    width: 30%;
+    width: 80%;
     right: 0;
     top: 5px;
 }
@@ -628,6 +628,7 @@ header {
 }
 
 .footer__music__name-display {
+    display: none;
     position: relative;
     font-weight: 500;
     color: black;
@@ -653,7 +654,7 @@ header {
 }
 
 .footer__tri-shape--closed{
-    border-width: 0 0 1200px 1200px;
+    border-width: 0 0 77vw 77vw;
     transition: border-width 3s ease-in-out;
     -webkit-transition: border-width 3s ease-in-out;
     -moz-transition: border-width 3s ease-in-out;
@@ -732,7 +733,7 @@ header {
 }
 
 .splash-page__top-tri-shape--closed{
-    border-width: 1200px 1200px 0 0;
+    border-width: 77vw 77vw 0 0;
     transition: border-width 3s ease-in-out;
     -webkit-transition: border-width 3s ease-in-out;
     -moz-transition: border-width 3s ease-in-out;
@@ -740,7 +741,7 @@ header {
 }
 
 .splash-page__bottom-tri-shape--closed{
-    border-width: 0 0 1200px 1200px;
+    border-width: 0 0 77vw 77vw;
     transition: border-width 3s ease-in-out;
     -webkit-transition: border-width 3s ease-in-out;
     -moz-transition: border-width 3s ease-in-out;
@@ -755,6 +756,13 @@ header {
 .splash-page__bottom-tri-shape--open{
     border-width: 0 0 0 0;
     transition: border-width 3s ease-in-out;
+}
+
+@media only screen and (max-width: 1000px){
+    .container__main-header{
+        display: inline-block;
+        right: 30%;
+    }
 }
 
 @media only screen and (max-width: 720px){
@@ -783,4 +791,11 @@ header {
         height: auto !important;
     }
 
+}
+
+@media only screen and (max-width: 450px){
+    .container__main-header{
+        display: inline-block;
+        right: 10%;
+    }
 }
