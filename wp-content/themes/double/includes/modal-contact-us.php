@@ -13,7 +13,18 @@ error_reporting(0);
 
 <div class="container__contact-us">
 
-<p>Non in duis cupidatat eiusmod et nisi in. Est tempor anim sunt ipsum aliqua in eu non aliqua culpa. Enim dolore aliqua Lorem enim officia deserunt est in officia. Aliqua sunt ad mollit eiusmod anim Lorem nisi quis non occaecat sint.</p>
+<p>
+November 3, 2018</br>
+Lehman College Concert Hall (The Legends of Disco)</br>
+250 Bedford Park Boulevard West Bronx NY 10468
+</p>
+
+<p>
+December 31St 2018</br>
+Emerald & Aquamarine Ballroom (NEW YEARS EVE BASH)</br>
+3534 Broadway at 145th Street Harlem, NY 10031
+</p>
+
 <?php if( $_SERVER[ 'SERVER_ADDR' ] === '127.0.0.1' ){ 
      echo do_shortcode( '[calendar id="18"]' );
 } else{
